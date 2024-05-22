@@ -1,0 +1,42 @@
+public class formativa3 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		double valor1;
+		System.out.println("Digite o primeiro valor:");
+		valor1 = ler.nextDouble();
+		System.out.println("Digite o segundo valor:");
+		double valor2 = ler.nextDouble();
+		System.out.println("Escolha um operador para calcular + ou - ou * ou / :");
+		char operador = ler.next().charAt(0);
+		double resultado = 0;
+		switch (operador) {
+		case '+':
+		resultado = valor1 + valor2;
+		break;
+		case '-':
+		resultado = valor1 - valor2;
+		break;
+		case '*':
+		resultado = valor1 * valor2;
+		break;
+		case '/':
+		if (valor2 != 0) {
+		resultado = valor1 / valor2;
+		} else {
+		System.out.println("Erro: Divisão por zero!");
+		return;
+		}
+		break;
+		default:
+		System.out.println("Operador inválido!");
+		return;
+		}
+		System.out.println("O resultado é: " + resultado);
+		ler.close();
+		
+	
+	
+	
+	}
+	}
